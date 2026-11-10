@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CKUT — Off The Hook feeds</title>
+<link rel="alternate" type="application/rss+xml" title="Off The Hook playlists" href="feed-oh.xml">
+<link rel="alternate" type="application/rss+xml" title="Off The Hook audio" href="podcast-oh.xml">
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0; padding: 2.5rem 1.25rem; }
+  main { max-width: 40rem; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin: 0 0 .35rem; }
+  p.lede { color: #666; margin: 0 0 2rem; }
+  .feed { border: 1px solid #ddd; border-radius: 10px; padding: 1rem 1.15rem; margin: 0 0 1rem; }
+  .feed h2 { font-size: 1rem; margin: 0 0 .3rem; }
+  .feed p { margin: 0 0 .8rem; font-size: .9rem; color: #666; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; word-break: break-all; }
+  input { width: 100%; box-sizing: border-box; font: inherit; font-size: .85rem; padding: .5rem .6rem;
+          border: 1px solid #ccc; border-radius: 8px; background: transparent; color: inherit; }
+  footer { margin-top: 2rem; font-size: .85rem; color: #666; }
+  a { color: #a12; }
+  @media (prefers-color-scheme: dark) {
+    p.lede, .feed p, footer { color: #999; }
+    .feed, input { border-color: #333; }
+    a { color: #f8e87c; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>CKUT — Off The Hook feeds</h1>
+  <p class="lede">CKUT's playlist page for Off The Hook has no working feed of its own, so these are scraped from
+    <a href="https://ckut.ca/playlists/OH">ckut.ca/playlists/OH</a> and published as static XML.</p>
+
+  <div class="feed">
+    <h2>Playlists</h2>
+    <p>One item per episode: date, link to the playlist page, and the full tracklist in the description.</p>
+    <input readonly data-feed="feed-oh.xml" value="feed-oh.xml" onclick="this.select()" aria-label="Playlist feed URL">
+  </div>
+
+  <div class="feed">
+    <h2>Audio archives (podcast)</h2>
+    <p>The same episodes plus an enclosure pointing at CKUT's own MP3. Nothing is rehosted here.</p>
+    <input readonly data-feed="podcast-oh.xml" value="podcast-oh.xml" onclick="this.select()" aria-label="Podcast feed URL">
+  </div>
+
+  <footer>
+    Content belongs to CKUT 90.3 FM. Subscribe to these URLs directly — pasting the CKUT page into a reader will
+    find CKUT's own dead feed links instead of these. Updated hourly.
+  </footer>
+</main>
+<script>
+  // show absolute URLs so a copy/paste works in any reader
+  document.querySelectorAll('input[data-feed]').forEach(function (input) {
+    input.value = new URL(input.dataset.feed, location.href).href;
+  });
+</script>
+</body>
+</html>

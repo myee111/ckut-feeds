@@ -1,0 +1,59 @@
+name: Update feeds
+
+on:
+  schedule:
+    # hourly; GitHub may delay scheduled runs by a few minutes at busy times,
+    # which does not matter for a weekly show
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-feeds
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build feeds
+        env:
+          FEED_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: python scrape.py
+
+      - name: Validate XML
+        run: |
+          python - <<'PY'
+          import glob, xml.etree.ElementTree as ET
+          files = sorted(glob.glob("feed-*.xml") + glob.glob("podcast-*.xml"))
+          assert files, "no feeds were written"
+          for f in files:
+              root = ET.parse(f).getroot()
+              items = root.findall("./channel/item")
+              assert items, f"{f} has no items"
+              print(f"{f}: ok, {len(items)} items")
+          PY
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git config user.name "ckut-feed bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Update feeds"
+          git push
