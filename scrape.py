@@ -341,7 +341,6 @@ def build_feed(episodes: list[Episode], kind: str) -> str:
             f"<itunes:summary>{esc(channel_desc)}</itunes:summary>",
             "<itunes:explicit>false</itunes:explicit>",
             '<itunes:category text="Music"/>',
-            "<itunes:owner><itunes:name>CKUT 90.3 FM</itunes:name></itunes:owner>",
         ]
 
     for ep in episodes:
