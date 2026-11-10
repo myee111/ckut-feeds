@@ -87,6 +87,20 @@ class Episode:
             return f"{BASE}/playlists/shows/{self.playlist_id}"
         return f"{BASE}/playlists/{SHOW}"
 
+    @property
+    def audio_url(self) -> str | None:
+        """Stable entry point.
+
+        The CDN paths under archives.ckut.ca/archives/ are an evictable cache
+        and start answering 404 once a file ages out, so link to the station's
+        own download endpoint instead: it always resolves, even if the response
+        it redirects to is a cold-cache stream.
+        """
+        show_id = self.show_id or self.playlist_id
+        if not (self.archive_id and show_id):
+            return None
+        return f"{BASE}/listen.php?show={show_id}d&archive={self.archive_id}"
+
 
 # ---------------------------------------------------------------------- http
 
@@ -352,12 +366,13 @@ def build_feed(episodes: list[Episode], kind: str) -> str:
         out.append(f"<pubDate>{pub_date(ep)}</pubDate>")
         out.append(f"<description>{cdata(tracklist_html(ep))}</description>")
         if podcast:
-            if ep.audio:
+            if ep.audio_url:
+                length = ep.audio.get("length") if ep.audio else 0
                 out.append(
-                    f'<enclosure url="{esc(ep.audio["url"])}" '
-                    f'length="{ep.audio["length"]}" type="{esc(ep.audio["type"])}"/>'
+                    f'<enclosure url="{esc(ep.audio_url)}" '
+                    f'length="{length or 0}" type="audio/mpeg"/>'
                 )
-                if ep.audio.get("duration"):
+                if ep.audio and ep.audio.get("duration"):
                     out.append(f"<itunes:duration>{ep.audio['duration']}</itunes:duration>")
         out.append("</item>")
 
