@@ -33,8 +33,9 @@ feed links instead.
 
 ## How it works
 
-`.github/workflows/feed.yml` runs `scrape.py` hourly (`17 * * * *`), commits the regenerated XML if it changed,
-and Pages serves the result. Scheduled runs can be delayed a few minutes; that does not matter for a weekly show.
+`.github/workflows/feed.yml` runs `scrape.py` four times a day (`30 7,13,18,23 * * *` UTC), commits the
+regenerated XML if it changed, and Pages serves the result. The 07:30 slot sits just after the Thursday show
+ends; GitHub's scheduler may still start a run late or skip one when it is busy.
 
 `scrape.py`:
 

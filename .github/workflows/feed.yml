@@ -2,9 +2,10 @@ name: Update feeds
 
 on:
   schedule:
-    # hourly; GitHub may delay scheduled runs by a few minutes at busy times,
-    # which does not matter for a weekly show
-    - cron: "17 * * * *"
+    # four runs a day, UTC: 07:30 lands just after the Thursday 00:00-02:00
+    # (America/Toronto) show ends and its archive is published; the rest catch
+    # tracklists that get filled in later. GitHub can still delay these runs.
+    - cron: "30 7,13,18,23 * * *"
   workflow_dispatch:
 
 permissions:
