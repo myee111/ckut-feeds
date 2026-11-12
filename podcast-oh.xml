@@ -5,7 +5,7 @@
 <link>https://ckut.ca/playlists/OH</link>
 <description>Audio archives of Off The Hook on CKUT 90.3 FM, Montreal. Every Thursday, midnight-2am (America/Toronto). MP3s are served by ckut.ca.</description>
 <language>en-ca</language>
-<lastBuildDate>Thu, 05 Nov 2026 00:00:00 -0500</lastBuildDate>
+<lastBuildDate>Thu, 12 Nov 2026 00:00:00 -0500</lastBuildDate>
 <ttl>60</ttl>
 <generator>ckut-feeds scrape.py</generator>
 <atom:link href="https://myee111.github.io/ckut-feeds/podcast-oh.xml" rel="self" type="application/rss+xml"/>
@@ -13,6 +13,15 @@
 <itunes:summary>Audio archives of Off The Hook on CKUT 90.3 FM, Montreal. Every Thursday, midnight-2am (America/Toronto). MP3s are served by ckut.ca.</itunes:summary>
 <itunes:explicit>false</itunes:explicit>
 <itunes:category text="Music"/>
+<item>
+<title>Off The Hook — November 12, 2026</title>
+<link>https://ckut.ca/playlists/shows/32199</link>
+<guid isPermaLink="false">ckut:oh:archive:32137</guid>
+<pubDate>Thu, 12 Nov 2026 00:00:00 -0500</pubDate>
+<description><![CDATA[<p><a href="https://ckut.ca/playlists/shows/32199">Playlist on ckut.ca</a></p><ol><li><strong>Missy Elliott</strong> — Hit 'Em Wit 'Da Hee (Feat. Lil' Kim) <em>(Supa Dupa Fly, 1997)</em></li><li><strong>NARCY &amp; Buddha Blaze</strong> — Pay Me Fwd</li><li><strong>NARCY</strong> — The Veil (Prod. by Mike Shabb)</li><li><strong>Rvlr Magz</strong> — Ghetto (Prod. by 80Rock)</li><li><strong>Showbiz &amp; A.G.</strong> — Drop It Heavy (Feat. KRS-One &amp; Big Pun)</li><li><strong>Mori$$ Regal</strong> — 22 Minutes (Prod. by 80Rock)</li><li><strong>Ghostface Killah</strong> — After The Smoke Is Clear (Feat. The Delfonics, Raekwon, and RZA)</li><li><strong>Mike Shabb</strong> — Montreal!</li><li><strong>SeinsSucrer</strong> — Pepsi</li><li><strong>Freddie Gibbs &amp; The Alchemist</strong> — Gas Station Sushi</li><li><strong>Jimmie D &amp; Nicholas Craven</strong> — Dead Cat Bounce</li><li><strong>Redman</strong> — Whateva Man (Feat. Erick Sermon, Method Man)</li><li><strong>Screwball</strong> — H-O-S-T-Y-L-E</li><li><strong>Slum Village</strong> — Players</li><li><strong>AZ</strong> — Magic Hour (Feat. C.L. Smooth)</li><li><strong>Smif-N-Wessun</strong> — Wontime</li><li><strong>Fu-Schnickens</strong> — La Schmoove (Feat. Phife Dawg)</li><li><strong>Keith Murray</strong> — Get Lifted</li><li><strong>The Beatnuts</strong> — Ya Don't Stop</li></ol>]]></description>
+<enclosure url="https://ckut.ca/listen.php?show=32199d&amp;archive=32137" length="117121152" type="audio/mpeg"/>
+<itunes:duration>7200</itunes:duration>
+</item>
 <item>
 <title>Off The Hook — November 5, 2026</title>
 <link>https://ckut.ca/playlists/shows/32095</link>
@@ -362,15 +371,6 @@
 <pubDate>Thu, 12 Feb 2026 00:00:00 -0500</pubDate>
 <description><![CDATA[<p><a href="https://ckut.ca/playlists/shows/28193">Playlist on ckut.ca</a></p><ol><li><strong>Jay-Z</strong> — Do It Again (Put Ya Hands Up) (Feat. Beanie Sigel and Amil) <em>(Vol. 3 Life and Times of S. Carter, 1999)</em></li><li><strong>Existence</strong> — Purple Dinosaur (Prod. by Wiser Times)</li><li><strong>Roc Marciano</strong> — Trick Bag <em>(656)</em></li><li><strong>Pete Rock</strong> — Respect Mine (Feat. OC)</li><li><strong>Narcy &amp; Buddha Blaze</strong> — NO SMOKING ALLOWED <em>(No Smoking Allowed)</em></li><li><strong>SeinsSucrer, Avian</strong> — Futuristique Dope Dealer</li><li><strong>Funkdoobiest</strong> — Holdin' It Down</li><li><strong>Flee Lord, Jansport J</strong> — Ain't No Love (Feat. Knowledge the Pirate)</li><li><strong>Redman</strong> — On Fire</li><li><strong>Devin The Dude</strong> — Doobie Ashtray</li><li><strong>Larry June &amp; The Alchemist</strong> — Porsches in Spanish</li><li><strong>Danny Brown</strong> — The Return (Feat. Freddie Gibbs)</li><li><strong>Statik Selektah</strong> — Make Believe (Feat. Freddie Gibbs, Termanology, and Ea$y Money)</li><li><strong>Freddie Gibbs &amp; Madlib</strong> — Terrorist</li><li><strong>Freddie Gibbs &amp; Madlib</strong> — Lakers (Feat. Polyester the Saint &amp; Ab-Soul)</li><li><strong>Freddie Gibbs &amp; Madlib</strong> — Crime Pays</li><li><strong>Freddie Gibbs &amp; The Alchemist</strong> — Lavish Habits</li><li><strong>Freddie Gibbs &amp; Madlib</strong> — Palmolive (Feat. Killer Mike and Pusha T)</li><li><strong>ScHoolboy Q</strong> — oHio (Feat. Freddie Gibbs)</li><li><strong>The Alchemist</strong> — Ferraris in the Rain Part 2 (Feat. Freddie Gibbs, and Schoolboy Q)</li><li><strong>Freddie Gibbs &amp; The Alchemist</strong> — Ensalada (Feat. Anderson .Paak)</li></ol>]]></description>
 <enclosure url="https://ckut.ca/listen.php?show=28193d&amp;archive=28138" length="117121152" type="audio/mpeg"/>
-<itunes:duration>7200</itunes:duration>
-</item>
-<item>
-<title>Off The Hook — February 5, 2026</title>
-<link>https://ckut.ca/playlists/shows/28088</link>
-<guid isPermaLink="false">ckut:oh:archive:28035</guid>
-<pubDate>Thu, 05 Feb 2026 00:00:00 -0500</pubDate>
-<description><![CDATA[<p><a href="https://ckut.ca/playlists/shows/28088">Playlist on ckut.ca</a></p><p><em>No tracklist published yet.</em></p>]]></description>
-<enclosure url="https://ckut.ca/listen.php?show=28088d&amp;archive=28035" length="117121152" type="audio/mpeg"/>
 <itunes:duration>7200</itunes:duration>
 </item>
 </channel>
