@@ -52,7 +52,8 @@ and Pages serves the result. Scheduled runs can be delayed a few minutes; that d
 photo on a blurred, darkened version of itself). Both feeds reference it through `<image>`, and the podcast feed
 also sets `<itunes:image>` on the channel and every item.
 
-Steady state is about two requests a week: the index page on every run, one show page per new episode.
+Each run fetches the index page plus the three most recent show pages (`CKUT_REFRESH_RECENT`, so a playlist that is
+filled in late gets picked up), and one HEAD or one-byte range probe for any episode whose audio size is not cached.
 `ckut.ca/robots.txt` disallows only `/wp-admin/`.
 
 ## Configuration
