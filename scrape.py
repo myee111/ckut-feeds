@@ -317,6 +317,11 @@ def pub_date(ep: Episode) -> str:
     return email.utils.format_datetime(stamp)
 
 
+def artwork_url() -> str:
+    """Square cover art served from the same Pages site (see README)."""
+    return os.environ.get("CKUT_ARTWORK_URL", "").strip() or f"{FEED_BASE_URL}/artwork.jpg"
+
+
 def build_feed(episodes: list[Episode], kind: str) -> str:
     podcast = kind == "podcast"
     self_url = f"{FEED_BASE_URL}/podcast-{SHOW.lower()}.xml" if podcast else f"{FEED_BASE_URL}/feed-{SHOW.lower()}.xml"
@@ -334,6 +339,7 @@ def build_feed(episodes: list[Episode], kind: str) -> str:
     # newest item rather than wall-clock time, so a run with no new episodes
     # produces byte-identical output and the workflow commits nothing
     now = pub_date(episodes[0]) if episodes else email.utils.format_datetime(dt.datetime.now(TZ))
+    art = artwork_url()
     out: list[str] = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"'
@@ -348,9 +354,12 @@ def build_feed(episodes: list[Episode], kind: str) -> str:
         "<ttl>60</ttl>",
         "<generator>ckut-feeds scrape.py</generator>",
         f'<atom:link href="{esc(self_url)}" rel="self" type="application/rss+xml"/>',
+        f"<image><url>{esc(art)}</url><title>{esc(channel_title)}</title>"
+        f"<link>{esc(BASE + '/playlists/' + SHOW)}</link></image>",
     ]
     if podcast:
         out += [
+            f'<itunes:image href="{esc(art)}"/>',
             "<itunes:author>CKUT 90.3 FM</itunes:author>",
             f"<itunes:summary>{esc(channel_desc)}</itunes:summary>",
             "<itunes:explicit>false</itunes:explicit>",
@@ -366,6 +375,7 @@ def build_feed(episodes: list[Episode], kind: str) -> str:
         out.append(f"<pubDate>{pub_date(ep)}</pubDate>")
         out.append(f"<description>{cdata(tracklist_html(ep))}</description>")
         if podcast:
+            out.append(f'<itunes:image href="{esc(art)}"/>')
             if ep.audio_url:
                 length = ep.audio.get("length") if ep.audio else 0
                 out.append(

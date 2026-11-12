@@ -15,6 +15,8 @@
   .feed { border: 1px solid #ddd; border-radius: 10px; padding: 1rem 1.15rem; margin: 0 0 1rem; }
   .feed h2 { font-size: 1rem; margin: 0 0 .3rem; }
   .feed p { margin: 0 0 .8rem; font-size: .9rem; color: #666; }
+  .masthead { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  .masthead img { width: 84px; height: 84px; border-radius: 12px; object-fit: cover; }
   code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; word-break: break-all; }
   input { width: 100%; box-sizing: border-box; font: inherit; font-size: .85rem; padding: .5rem .6rem;
           border: 1px solid #ccc; border-radius: 8px; background: transparent; color: inherit; }
@@ -29,7 +31,10 @@
 </head>
 <body>
 <main>
-  <h1>CKUT — Off The Hook feeds</h1>
+  <div class="masthead">
+    <img src="artwork.jpg" alt="Off The Hook cover art">
+    <h1>CKUT — Off The Hook feeds</h1>
+  </div>
   <p class="lede">CKUT's playlist page for Off The Hook has no working feed of its own, so these are scraped from
     <a href="https://ckut.ca/playlists/OH">ckut.ca/playlists/OH</a> and published as static XML.</p>
 

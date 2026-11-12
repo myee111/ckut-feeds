@@ -48,6 +48,10 @@ and Pages serves the result. Scheduled runs can be delayed a few minutes; that d
   half-finished playlist later does not re-notify subscribers;
 - fails loudly if nothing parses, rather than committing an empty feed.
 
+`artwork.jpg` is a 1400×1400 square built once from the show image CKUT publishes on the playlist page (the
+photo on a blurred, darkened version of itself). Both feeds reference it through `<image>`, and the podcast feed
+also sets `<itunes:image>` on the channel and every item.
+
 Steady state is about two requests a week: the index page on every run, one show page per new episode.
 `ckut.ca/robots.txt` disallows only `/wp-admin/`.
 
@@ -63,7 +67,8 @@ Environment variables, all optional:
 | `CKUT_MAX_ITEMS` | `40` | How many episodes to publish |
 | `CKUT_REFRESH_RECENT` | `3` | Newest N episodes always re-scraped |
 | `CKUT_YEARS` | empty | Extra archive pages, e.g. `2025,2024` (they live at `/playlists/OH2025`) |
-| `FEED_BASE_URL` | — | Absolute base for `atom:link rel=self`; the workflow derives it |
+| `FEED_BASE_URL` | — | Absolute base for `atom:link rel=self` and the artwork URL; the workflow derives it |
+| `CKUT_ARTWORK_URL` | `<FEED_BASE_URL>/artwork.jpg` | Cover art used for `<image>` and `<itunes:image>` |
 | `CKUT_USER_AGENT` | `ckut-feed/1.0 …` | Set this to something with a contact URL if you fork it |
 
 For another show: change `CKUT_SHOW`/`CKUT_SHOW_NAME`, then rename the two output files or add a matrix job.
