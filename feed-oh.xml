@@ -5,11 +5,18 @@
 <link>https://ckut.ca/playlists/OH</link>
 <description>Playlists for Off The Hook on CKUT 90.3 FM, Montreal. Every Thursday, midnight-2am (America/Toronto). Scraped from ckut.ca, whose own playlist feed returns 404.</description>
 <language>en-ca</language>
-<lastBuildDate>Thu, 12 Nov 2026 00:00:00 -0500</lastBuildDate>
+<lastBuildDate>Thu, 19 Nov 2026 00:00:00 -0500</lastBuildDate>
 <ttl>60</ttl>
 <generator>ckut-feeds scrape.py</generator>
 <atom:link href="https://myee111.github.io/ckut-feeds/feed-oh.xml" rel="self" type="application/rss+xml"/>
 <image><url>https://myee111.github.io/ckut-feeds/artwork.jpg</url><title>CKUT — Off The Hook playlists</title><link>https://ckut.ca/playlists/OH</link></image>
+<item>
+<title>Off The Hook — November 19, 2026</title>
+<link>https://ckut.ca/playlists/shows/32299</link>
+<guid isPermaLink="false">ckut:oh:playlist:32299</guid>
+<pubDate>Thu, 19 Nov 2026 00:00:00 -0500</pubDate>
+<description><![CDATA[<p><a href="https://ckut.ca/playlists/shows/32299">Playlist on ckut.ca</a></p><ol><li><strong>PRhyme</strong> — Wishin (Feat. Common)</li><li><strong>Bruiser Wolf &amp; Conductor Williams</strong> — Dig Some Jive</li><li><strong>Westside Gunn</strong> — TOMMY HEELFIGGER (Feat. Stove God Cooks)</li><li><strong>The Roots</strong> — Double Trouble (Feat. Mos Def)</li><li><strong>People Under the Stairs</strong> — San Francisco Knights</li><li><strong>Missy Elliott</strong> — Hit 'Em Wit 'Da Hee (Feat. Lil' Kim)</li><li><strong>Statik Selektah</strong> — Eye Shine (Feat. Busta Rhymes, Smif-N-Wessun &amp; Nina Sky)</li><li><strong>NARCY</strong> — AMREEKA (Prod. by Sandhill)</li><li><strong>TokyoSensei &amp; Shogo</strong> — Do You Remember</li><li><strong>NARCY &amp; Buddha Blaze</strong> — Benevolent Blunted (Feat. Pro-V)</li><li><strong>Mike Shabb</strong> — Don't Talk (Prod. by 80Rock)</li><li><strong>Fat Joe</strong> — The Shit Is Real (DJ Premier Remix)</li><li><strong>Royal Flush</strong> — Worldwide</li><li><strong>Bruiser Wolf &amp; Conductor Williams</strong> — The Score</li></ol>]]></description>
+</item>
 <item>
 <title>Off The Hook — November 12, 2026</title>
 <link>https://ckut.ca/playlists/shows/32199</link>
@@ -282,13 +289,6 @@
 <guid isPermaLink="false">ckut:oh:playlist:28240</guid>
 <pubDate>Thu, 19 Feb 2026 00:00:00 -0500</pubDate>
 <description><![CDATA[<p><a href="https://ckut.ca/playlists/OH">Playlist on ckut.ca</a></p><p><em>No tracklist was published for this episode.</em></p>]]></description>
-</item>
-<item>
-<title>Off The Hook — February 12, 2026</title>
-<link>https://ckut.ca/playlists/shows/28193</link>
-<guid isPermaLink="false">ckut:oh:playlist:28193</guid>
-<pubDate>Thu, 12 Feb 2026 00:00:00 -0500</pubDate>
-<description><![CDATA[<p><a href="https://ckut.ca/playlists/shows/28193">Playlist on ckut.ca</a></p><ol><li><strong>Jay-Z</strong> — Do It Again (Put Ya Hands Up) (Feat. Beanie Sigel and Amil) <em>(Vol. 3 Life and Times of S. Carter, 1999)</em></li><li><strong>Existence</strong> — Purple Dinosaur (Prod. by Wiser Times)</li><li><strong>Roc Marciano</strong> — Trick Bag <em>(656)</em></li><li><strong>Pete Rock</strong> — Respect Mine (Feat. OC)</li><li><strong>Narcy &amp; Buddha Blaze</strong> — NO SMOKING ALLOWED <em>(No Smoking Allowed)</em></li><li><strong>SeinsSucrer, Avian</strong> — Futuristique Dope Dealer</li><li><strong>Funkdoobiest</strong> — Holdin' It Down</li><li><strong>Flee Lord, Jansport J</strong> — Ain't No Love (Feat. Knowledge the Pirate)</li><li><strong>Redman</strong> — On Fire</li><li><strong>Devin The Dude</strong> — Doobie Ashtray</li><li><strong>Larry June &amp; The Alchemist</strong> — Porsches in Spanish</li><li><strong>Danny Brown</strong> — The Return (Feat. Freddie Gibbs)</li><li><strong>Statik Selektah</strong> — Make Believe (Feat. Freddie Gibbs, Termanology, and Ea$y Money)</li><li><strong>Freddie Gibbs &amp; Madlib</strong> — Terrorist</li><li><strong>Freddie Gibbs &amp; Madlib</strong> — Lakers (Feat. Polyester the Saint &amp; Ab-Soul)</li><li><strong>Freddie Gibbs &amp; Madlib</strong> — Crime Pays</li><li><strong>Freddie Gibbs &amp; The Alchemist</strong> — Lavish Habits</li><li><strong>Freddie Gibbs &amp; Madlib</strong> — Palmolive (Feat. Killer Mike and Pusha T)</li><li><strong>ScHoolboy Q</strong> — oHio (Feat. Freddie Gibbs)</li><li><strong>The Alchemist</strong> — Ferraris in the Rain Part 2 (Feat. Freddie Gibbs, and Schoolboy Q)</li><li><strong>Freddie Gibbs &amp; The Alchemist</strong> — Ensalada (Feat. Anderson .Paak)</li></ol>]]></description>
 </item>
 </channel>
 </rss>
